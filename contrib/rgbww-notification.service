@@ -1,0 +1,19 @@
+# To use rgbww-notification as a systemd service,
+# make sure that you have installed everything at /opt/rgbww-notification
+# or change the paths here.
+# Then copy this file to /etc/systemd/system and execute
+# $ systemctl enable rgbww-notification
+
+[Unit]
+Description=RGBWW Notifications
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+WorkingDirectory=/opt/rgbww-notification
+ExecStart=/opt/rgbww-notification/daemon.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
