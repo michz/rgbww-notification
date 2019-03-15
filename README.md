@@ -7,6 +7,11 @@ via RGBWW LED hardware
 and https://github.com/patrickjahns/esp_rgbww_firmware
 for information about the hardware).
 
+Requirements
+-----------
+
+You need Python3.
+
 
 Installation
 ------------
